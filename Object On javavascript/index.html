@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objek pada javascript</title>
+</head>
+<body>
+    <h1>Belajar dengan javascript</h1>
+    <img src="Google.png" alt="Google Image" width="150px">
+    <br>
+    nama: <span id="nama"></span>
+    <br>
+    umur: <span id="umur"></span>
+    <br>
+    sifat: <span id="sifat"></span>
+    <br>
+    <div id="box"></div>
+
+    <script>
+        // membuat objek 
+        // key dan value 
+        var programer = {
+            nama : "kamal",
+            umur : 17,
+            sifat: "baik",
+            getData : function() {
+                return "Nama: " + this.nama + "Umur: " + this.umur + "Sifat" + this.sifat;
+            
+            },
+            setData : function(nama) {
+                this.nama = nama;
+            }
+        };
+
+        function pemain_bola (Nama , umur) {
+            this.nama = Nama;
+            this.umur = umur;
+        }
+        
+
+        // var designer = {
+        //     nama : "edo",
+        //     umur : 16,
+        //     sifat: "bimbang"
+        // }
+        // var analyst = {
+        //     nama : "rahmat",
+        //     umur : 18,
+        //     sifat: "kerja keras"
+        // }
+
+        programer.setData("papal");
+        document.getElementById('nama').innerHTML = programer.nama;
+        document.getElementById('umur').innerHTML = programer.umur;
+        document.getElementById('sifat').innerHTML = programer.sifat;
+        document.getElementById('box').innerHTML = programer.getData();
+        
+        var Aguero = new pemain_bola("Aguero", 20)
+        document.getElementById('box').innerHTML = Aguero.nama; 
+    </script>
+</body>
+</html>

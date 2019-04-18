@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>menghapus dan mengedit </title>
+</head>
+<body>
+    <img src="firebs.png" alt="firebase" width="100px">
+    
+    <div id="box1">
+        <div id="p1">paragraf 1</div>
+    </div>
+
+
+    <script>
+       var el= document.createElement('h2');
+       var text = document.createTextNode("Saya sedang belajar javascript");
+       var box = document.getElementById('box1');
+        
+       el.appendChild(text);
+       box.appendChild(el);
+// box hapus element
+        // id.removeChild(el)
+        // mengedit elemnt 
+       var el2 = document.createElement('h3');
+       var text2 = document.createTextNode('ayo harus optimis');
+       el2.appendChild(text2);
+       var p1= document.getElementById('p1');
+
+
+
+        box.replaceChild(el2, p1);
+    </script>
+</body>
+</html>
